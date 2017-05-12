@@ -78,6 +78,13 @@ h2 {
   bottom: 2rem;
 }
 
+.what-we-do {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.what-we-do h2 {
+  color: #F7DF1E;
+}
 .what-we-do a {
   color: #F7DF1E;
 }

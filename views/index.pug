@@ -11,21 +11,21 @@ block content
         h1= title
         p(class="lead")= message
         p(class="lead") We meet every two weeks to code, learn and collaborate.
-        p Are you new to JS101? 
+        p Interested in joining? 
         div.actions
-          a(class='btn btn-primary btn-lg' href='/getting-started') Get Started
+          a(class='btn btn-primary btn-lg' href='/getting-started') About JS101
 
     .section.row.bg
       h1 Kick start your JavaScript with a friendly bunch of enthusiasts
   
       .row
-        .col-lg-6
+        <!-- .col-lg-6
           h2 Meetup Archive
-          a(class='btn btn-primary' href='https://github.com/CodeHubOrg/discussions/issues') View Details
+          a(class='btn btn-primary' href='https://github.com/CodeHubOrg/discussions/issues') View Details -->
        
-        .col-lg-6
-          h2 Next Meetup
-          a(class='btn btn-primary' href='https://www.meetup.com/CodeHub-Bristol/') Sign Up
+        
+        h2 Next Meetup
+        a(class='btn btn-primary' href='https://www.meetup.com/CodeHub-Bristol/') Sign Up
 
     .section.row
       .jumbotron
@@ -40,22 +40,21 @@ block content
       .row.what-we-do
           h1 What do we do?
           .col-lg-3
-            a(href='/presentations')   
-              h2 Presentations
+            h2 Presentations
             p You present and we all learn
           .col-lg-3
-            a(href='/pair-programming') 
-              h2 Pair Programming
+            h2 Pair Programming
             p Two heads are better than one
           .col-lg-3
-            a(href='/code-reviews') 
-              h2 Code Reviews
+            h2 Code reviews
             p Improve your code
           .col-lg-3
-            a(href='/tech-stack')
-              h2 Bleeding Edge
-            p Use the latest technologies
+            h2 Projects
+            p Contribute using Git
+
+    .section.bg 
       .row.what-we-do
+        h1 What are the benefits?
         .col-lg-3
           a(href='getting-started/roadmap')
             h2 Guidance
@@ -72,6 +71,10 @@ block content
           a(href='/careers')
             h2 Level Up
           p Get prepared for professional work
+      .section.row 
+          div.actions
+            a(class='btn btn-primary' href='/getting-started') Read more
+
   
       
         

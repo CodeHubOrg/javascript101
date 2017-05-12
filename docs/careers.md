@@ -25,4 +25,4 @@ We have members from all levels of experience, from complete beginners to very e
 Members regularly share information and resources they have used for learning Javascript and related technologies
 
 ## Are you recruiting?
-Our members are often on the lookout for apprenticeships, new job or freelance opportunities. Please get in touch with us and we will probably be able to put you in touch with several members.
+Our members are often on the lookout for apprenticeships, new job or freelance opportunities. Please get in touch if you are interested in taking on an apprentice or paid intern.
