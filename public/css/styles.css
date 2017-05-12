@@ -138,12 +138,22 @@ h3 {
 .home .actions p{
 
 }
-.jumbotron {
-  background-color: #fff;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-top:0;
-  margin-bottom: 0;
+.jumbo-container{
+  position: relative;
+}
+.jumbo-container:after{
+  background: rgba(255,255,255,0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 100%;
+}
+.jumbotron-top {
+  background: transparent;
+  position: absolute;
+  top: 30px;
+  width: 100%;
 }
 
 .navbar-inverse{
@@ -179,6 +189,8 @@ th {
   margin-bottom: 0;
   padding-bottom: 0;
   margin-top: 3rem;
+  max-width: 1440px;
+  margin: 0 auto;
  /* max-width: 680px;
   margin: 60px auto;
   padding: 0px*/
@@ -191,7 +203,7 @@ th {
 
 .logos img{
   width: 100%;
-  max-width: 115px;
+  max-width: 150px;
   margin-bottom: 2em;
 }
 /* Sticky footer styles
