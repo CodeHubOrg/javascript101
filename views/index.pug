@@ -1,19 +1,23 @@
 extends layout.pug
 include mixins/logoList.pug
+include mixins/sponsorList.pug
+include mixins/randomQuote.pug
 
 block content
   .home
 
     .section.row.jumbo-container
       .row
-        +logoList(logoList)
-      .jumbotron.jumbotron-top
+        +logoList(techList)
+      
+    .jumbotron.jumbotron-top
         h1= title
         p(class="lead")= message
         p(class="lead") We meet every two weeks to code, learn and collaborate.
         p Interested in joining? 
         div.actions
           a(class='btn btn-primary btn-lg' href='/getting-started') About JS101
+
 
     .section.row.bg
       h1 Kick start your JavaScript with a friendly bunch of enthusiasts
