@@ -8,13 +8,14 @@ block content
 
     .section.row.jumbo-container
       .row
-        +logoList(techList)
+        +logoList(logoList)
       
     .jumbotron.jumbotron-top
         h1= title
         p(class="lead")= message
         p(class="lead") We meet every two weeks to code, learn and collaborate.
-        p Interested in joining? 
+        <!-- p &nbsp; -->
+        p Interested?
         div.actions
           a(class='btn btn-primary btn-lg' href='/getting-started') About JS101
 
@@ -31,16 +32,14 @@ block content
         h2 Next Meetup
         a(class='btn btn-primary' href='https://www.meetup.com/CodeHub-Bristol/') Sign Up
 
-    .section.row
-      .jumbotron
+    .row
+      .jumbotron.no-bottom-gap
         h1 Join the Conversation
 
         p Our Gitter channel. You will need a GitHub account.
         a(class='btn btn-primary' href='https://gitter.im/CodeHubOrg/discussions/') Join the discussion
-
-
     
-    .section.bg
+    .section.bg.no-bottom-gap
       .row.what-we-do
           h1 What do we do?
           .col-lg-3
@@ -58,7 +57,7 @@ block content
 
     .section.bg 
       .row.what-we-do
-        h1 What are the benefits?
+        h1 How does it help?
         .col-lg-3
           a(href='getting-started/roadmap')
             h2 Guidance
@@ -78,14 +77,6 @@ block content
       .section.row 
           div.actions
             a(class='btn btn-primary' href='/getting-started') Read more
-
-  
-      
-        
-    .section.row
-      h1 Technologies we use
-        .row
-            +logoList(techList)
     
 
     .section.row.bg-light

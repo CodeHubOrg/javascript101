@@ -1,6 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var techList = require('./model/tech')
+var logoList = require('./model/logo')
 var meetupList = require('./model/meetup')
 var sponsorList = require('./model/sponsor')
 var doc = require('./utils/doc')
@@ -16,6 +17,7 @@ router.get('/', function (req, res) {
     message: 'We are a JavaScript meetup group in Bristol, UK.',
     active: '/',
     techList: techList,
+    logoList: logoList,
     meetupList: meetupList,
     sponsorList: sponsorList,
     quotesInspiration: quotesInspiration,

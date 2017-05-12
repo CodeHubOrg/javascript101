@@ -71,6 +71,7 @@ h2 {
   padding-bottom: 6rem;
 }
 
+
 .chat img {
   width: 8rem;
   position: fixed;
@@ -97,6 +98,9 @@ h2 {
   margin-bottom: 2rem;
 }
 
+.no-bottom-gap{
+  margin-bottom: 0;
+}
 
 .panel-primary{
   border-color: #155C84;
@@ -141,20 +145,71 @@ h3 {
 .jumbo-container{
   position: relative;
 }
-.jumbo-container:after{
+
+.jumbotron-top {
   background: rgba(255,255,255,0.7);
+  position: absolute;
+  top: 50px;
+  width: 320px;
+  left: 50%;
+  margin-left: -160px;
+}
+.jumbotron-top p{
+  display: inline-block;
+  background: #fff;
+}
+
+@media (min-width:450px){
+  .jumbotron-top {   
+    width: 450px;
+    margin-left: -225px;
+   }
+  }
+
+@media (min-width:640px){
+  .jumbotron-top {
+  top: 100px;
+  width: 640px;
+  margin-left: -320px;
+  }
+}
+
+@media (min-width:760px){
+/*  .jumbo-container {
+    margin-top: 120px;
+  }*/
+  .jumbotron-top {
+
+  width: 760px;
+  margin-left: -380px;
+  }
+}
+
+@media (min-width:900px){
+/*  .jumbo-container:after{
+  background: rgba(255,255,255,0.4);
   position: absolute;
   top: 0;
   left: 0;
   height: 500px;
   width: 100%;
+}*/
+
+  .jumbotron-top {
+   background: rgba(255,255,255,0.85);
+  width: 900px;
+  margin-left: -450px;
+  }
 }
-.jumbotron-top {
-  background: transparent;
-  position: absolute;
-  top: 30px;
-  width: 100%;
+
+@media (min-width:1180px){
+  .jumbotron-top {
+  width: 900px;
+  margin-left: -450px;
+  }
 }
+
+
 
 .navbar-inverse{
   border-bottom: none;
