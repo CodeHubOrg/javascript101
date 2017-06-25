@@ -10,10 +10,16 @@
   "author": "js101",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.4.3",
     "express": "^4.15.2",
+    "express-session": "^1.15.3",
     "jsplumb": "^2.3.6",
     "marked": "^0.3.6",
     "object-assign": "^4.1.1",
+    "passport": "^0.3.2",
+    "passport-github": "^1.1.0",
     "pug": "^2.0.0-beta11"
   }
 }

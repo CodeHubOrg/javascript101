@@ -9,6 +9,11 @@ var subpages = require('./utils/subpages')
 var quotesInspiration = require('./model/quotesInspiration')
 var quotesCrockford = require('./model/quotesCrockford')
 var quotesJokes = require('./model/quotesJokes')
+var passport = require('passport')
+var GitHubStrategy = require('passport-github').Strategy;
+var options = require('./config.js')
+
+
 
 router.get('/', function (req, res) {
   res.render('index', {
@@ -37,7 +42,8 @@ var navItems = {
   '/team-environment': 'team-environment.md',
   '/feedback': 'feedback.md',
   '/tech-stack': 'tech-stack.md',
-  '/oauth': 'oauth.md'
+  '/oauth': 'oauth.md',
+  '/login': 'login.md'
 }
 
 for (var key in navItems){
@@ -72,5 +78,36 @@ router.get('/resources', function(req, res){
 router.get('/contact', function(req, res){
   res.render('contact', {active: '/contact'})
 })
+
+passport.use(new GitHubStrategy({
+    clientID: options.GITHUB_CLIENT_ID,
+    clientSecret: options.GITHUB_CLIENT_SECRET,
+    callbackURL: "https://staging.javascript101.co.uk/login/github/return"
+  },
+  function(accessToken, refreshToken, profile, cb) {
+    // User.findOrCreate({ githubId: profile.id }, function (err, user) {
+    //   return cb(err, user);
+    // });
+    console.log(profile)
+  }
+));
+
+router.use(require('cookie-parser')());
+router.use(require('body-parser').urlencoded({ extended: true }));
+router.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
+
+router.use(passport.initialize());
+router.use(passport.session());
+
+
+router.get('/login/github',
+  passport.authenticate('github'));
+
+router.get('/login/github/return', 
+  passport.authenticate('github', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
 
 module.exports = router
