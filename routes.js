@@ -36,7 +36,8 @@ var navItems = {
   '/code-reviews': 'what-we-do/code-reviews.md',
   '/team-environment': 'team-environment.md',
   '/feedback': 'feedback.md',
-  '/tech-stack': 'tech-stack.md'
+  '/tech-stack': 'tech-stack.md',
+  '/oauth': 'oauth.md'
 }
 
 for (var key in navItems){
