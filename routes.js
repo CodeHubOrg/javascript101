@@ -79,11 +79,11 @@ router.get('/contact', function(req, res){
   res.render('contact', {active: '/contact'})
 })
 
-// beta https://staging.javascript101.co.uk/login/github/return
+// local http://127.0.0.1:3000/login/github/return 
 passport.use(new GitHubStrategy({
     clientID: options.GITHUB_CLIENT_ID,
     clientSecret: options.GITHUB_CLIENT_SECRET,
-    callbackURL: "http://127.0.0.1:3000/login/github/return"
+    callbackURL: "https://staging.javascript101.co.uk/login/github/return"
   },
   function(accessToken, refreshToken, profile, cb) {
     // User.findOrCreate({ githubId: profile.id }, function (err, user) {
