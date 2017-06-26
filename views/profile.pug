@@ -1,0 +1,12 @@
+extends doc.pug
+
+block content
+  - var activelink = active.substr(1).replace('/',' ')
+  div(class="main "+activelink)    
+    .container
+      div!= content
+      if user 
+        div!= user.displayName
+        div @#{user.username}
+      else 
+        div If you cannot see your Github profile here, <a href="/login/github">log in with Github</a>

@@ -17,9 +17,16 @@ var render = function(filename, res, vars) {
     if(filename == 'roadmap.md'){
       err ? console.error :
       res.render('roadmap', pageContent)
+    } else if(filename == 'profile.md'){
+        if(err) {
+          console.error;
+        } else {
+          //require('connect-ensure-login').ensureLoggedIn(),
+          res.render('profile', pageContent)
+        }
     } else {
-    err ? console.error :
-    res.render('doc', pageContent)
+      err ? console.error :
+      res.render('doc', pageContent)
     }
   })
 }
