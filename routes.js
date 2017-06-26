@@ -16,6 +16,8 @@ var options = require('./appConfig.js')
 var util = require('util');
 
 
+console.log(meetupList, techList)
+
 router.get('/', function (req, res) {
   res.render('index', {
     title: 'Welcome to JavaScript 101',
@@ -23,7 +25,7 @@ router.get('/', function (req, res) {
     active: '/',
     techList: techList,
     meetupList: meetupList,
-    sponsorList: sponsorList,
+    sponsorList: sponsorList,   
     quotesInspiration: quotesInspiration,
     quotesCrockford: quotesCrockford,
     quotesJokes: quotesJokes
