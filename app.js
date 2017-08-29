@@ -8,6 +8,6 @@ app.use(express.static('public'))
 
 app.use('/', routes)
 
-app.listen(3000, function () {
-  console.log('🌎 Staging JS 101 website is running at http://0.0.0.0:3000')
+app.listen(3310, function () {
+  console.log('🌎 Staging JS 101 website is running at http://0.0.0.0:3310')
 })
