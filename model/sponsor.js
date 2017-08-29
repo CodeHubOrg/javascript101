@@ -8,7 +8,7 @@ var sponsorList = [
     style: "background-position: -660px 0; width: 120px; height: 36px;" 
   },
   {
-    url: "https://oncorps.io",
+    url: "http://oncorps.io",
     style: "background-position: -660px -58px; width: 120px; height: 39px;" 
   },
   {
